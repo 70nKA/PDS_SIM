@@ -33,7 +33,7 @@ module main_test;
 	//wire sobel_data_valid;
 
 	// Instantiate the Unit Under Test (UUT)
-	sobel_main1 uut (
+	sobel_main uut (
 		.clk(clk), 
 		.reset(reset)
 		//.sobel_data(sobel_data), 

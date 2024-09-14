@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/ise/sim/sobel/main_test_isim_beh.exe" -prj "/home/ise/sim/sobel/main_test_beh.prj" "main_test" "work.glbl" 
+-prj "sobel_main_beh.prj" -top "main_test" -o "main_test_sim.exe" 

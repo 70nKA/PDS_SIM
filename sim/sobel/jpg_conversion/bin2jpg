@@ -1,0 +1,48 @@
+import sys
+from PIL import Image
+import numpy as np
+
+def create_jpg_from_raw_with_padding(raw_bytes_file, output_file, width=512, height=512):
+    # Read raw binary data
+    pixel_data = []
+    with open(raw_bytes_file, 'r') as f:
+        for line in f:
+            try:
+                # Convert binary string to integer and append to pixel data
+                byte = int(line.strip(), 2)  # Base 2 for binary
+                pixel_data.append(byte)
+            except ValueError as e:
+                print("Error converting line '{}': {}".format(line.strip(), e))
+                continue  # Skip any lines that cause a conversion error
+
+    # Calculate the required number of pixels
+    required_size = width * height
+
+    # Add padding if the pixel data is shorter than required
+    if len(pixel_data) < required_size:
+        padding_size = required_size - len(pixel_data)
+        print(f"Padding with {padding_size} bytes.")
+        pixel_data.extend([0] * padding_size)
+
+    # Trim the pixel data if it exceeds the required size
+    elif len(pixel_data) > required_size:
+        print("Warning: Pixel data size exceeds the required image size, trimming extra bytes.")
+        pixel_data = pixel_data[:required_size]
+
+    # Convert pixel data to a NumPy array
+    image_array = np.array(pixel_data, dtype=np.uint8).reshape((height, width))
+
+    # Create a grayscale image from the NumPy array
+    image = Image.fromarray(image_array, mode='L')
+
+    # Save the image in JPEG format
+    image.save(output_file, 'JPEG')
+
+# Main section to accept command-line arguments
+if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        print("Usage: python script_name.py <raw_bytes_file> <output_file>")
+    else:
+        raw_bytes_file = sys.argv[1]  # Get raw bytes file from command-line
+        output_file = sys.argv[2]     # Get output JPEG file from command-line
+        create_jpg_from_raw_with_padding(raw_bytes_file, output_file)

@@ -4,6 +4,6 @@ PDS project: Sobel edge detection simulation
 
 - sim/sobel/run_sobel.sh:
   -  dependencies:
-    - VM Linux Oracle 6.7
-    - python 3.6.5 and up (VM Linux Oracle 6.7)
-    - pip cmd (VM Linux Oracle 6.7)
+      - VM Linux Oracle 6.7
+      - python 3.6.5 and up (VM Linux Oracle 6.7)
+      - pip cmd (VM Linux Oracle 6.7)

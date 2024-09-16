@@ -61,8 +61,8 @@ module sobel_main
 	
 	initial
 		begin
-			$readmemb("lena_bin.txt", original_image); // load the input image
-			output_file = $fopen("filtered_lena_bin.txt", "w");
+			$readmemb("img_bin.txt", original_image); // load the input image
+			output_file = $fopen("sobel_img_bin.txt", "w");
 		end
 	
 	always@(posedge clk, posedge reset)
@@ -176,7 +176,7 @@ module sobel_main
 						
 						sobel_xy = (sobel_x < 0 ? -sobel_x : sobel_x) + (sobel_y < 0 ? -sobel_y : sobel_y);
 						
-						if(sobel_xy > 255)
+						if(sobel_xy > 319)
 							sobel_8xy = 8'b00000000;
 						else
 							sobel_8xy = 8'b11111111;					

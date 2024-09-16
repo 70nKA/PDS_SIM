@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-09-12T17:11:06</DateModified>
-  <ModuleName>sobel_main1</ModuleName>
+  <DateModified>2024-09-14T07:51:10</DateModified>
+  <ModuleName>sobel_main</ModuleName>
   <SummaryTimeStamp>2024-09-12T13:32:23</SummaryTimeStamp>
   <SavedFilePath>/home/ise/sim/sobel/iseconfig/sobel_main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/sim/sobel</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/ise/sim/sobel/</ImplementationReportsDirectory>
   <DateInitialized>2024-09-12T13:30:24</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -53,8 +53,8 @@ module sobel_main
 	reg [IMAGE_WIDTH_E:0] line_counter_reg, line_counter_next;
 	reg [IMAGE_WIDTH_E-1:0] byte_counter_reg, byte_counter_next;
 	
-	reg [10:0] sobel_x, sobel_y;
-	reg [10:0] sobel_xy;
+	reg signed [10:0] sobel_x, sobel_y;
+	reg signed [10:0] sobel_xy;
 	reg [BYTE_SIZE-1:0] sobel_8xy;
 	
 	integer output_file;
@@ -177,9 +177,9 @@ module sobel_main
 						sobel_xy = (sobel_x < 0 ? -sobel_x : sobel_x) + (sobel_y < 0 ? -sobel_y : sobel_y);
 						
 						if(sobel_xy > 255)
-							sobel_8xy = 8'b11111111;
+							sobel_8xy = 8'b00000000;
 						else
-							sobel_8xy = sobel_xy[7:0];
+							sobel_8xy = 8'b11111111;					
 						
 						$fwrite(output_file, "%b\n", sobel_8xy);
 						

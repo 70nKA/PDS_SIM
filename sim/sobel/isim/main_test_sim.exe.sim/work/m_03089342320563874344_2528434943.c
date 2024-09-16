@@ -22,8 +22,8 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "/home/ise/sim/sobel/main/sobel_main.v";
-static const char *ng1 = "lena_bin.txt";
-static const char *ng2 = "filtered_lena_bin.txt";
+static const char *ng1 = "img_bin.txt";
+static const char *ng2 = "sobel_img_bin.txt";
 static const char *ng3 = "w";
 static unsigned int ng4[] = {0U, 0U};
 static int ng5[] = {0, 0};
@@ -31,7 +31,7 @@ static unsigned int ng6[] = {1U, 0U};
 static int ng7[] = {1, 0};
 static unsigned int ng8[] = {2U, 0U};
 static int ng9[] = {2, 0};
-static int ng10[] = {255, 0};
+static int ng10[] = {319, 0};
 static unsigned int ng11[] = {255U, 0U};
 static const char *ng12 = "%b\n";
 static unsigned int ng13[] = {3U, 0U};

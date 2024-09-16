@@ -1,1 +1,1 @@
--prj "sobel_main_beh.prj" -top "main_test" -o "main_test_sim.exe" 
+-prj "main_test_beh.prj" -top "main_test" -o "main_test_sim.exe" 

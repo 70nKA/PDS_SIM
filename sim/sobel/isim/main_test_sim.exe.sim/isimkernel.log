@@ -2,9 +2,9 @@ Command line:
    main_test_sim.exe
      -simmode  tcl
      -simrunnum  0
-     -socket  47733
+     -socket  59655
 
-Sat Sep 14 08:14:01 2024
+Mon Sep 16 01:21:09 2024
 
 
  Elaboration Time: 0.05 sec
@@ -20,9 +20,9 @@ Sat Sep 14 08:14:01 2024
  Total Traceable Variables  : 30
  Total Scalar Nets and Variables : 2109855
 
- Total Simulation Time: 3.97 sec
+ Total Simulation Time: 4.43 sec
 
  Current Memory Usage: 253.784 Meg
 
-Sat Sep 14 08:14:05 2024
+Mon Sep 16 01:21:14 2024
 
